@@ -323,11 +323,11 @@ export class App extends React.Component<{}, AppState> {
           <div className="sm:flex">
             <div className="sm:w-1/2">
               <label className="block text-xs uppercase font-bold">Author</label>
-              <input onChange={this.handleAuthorChange} value={this.state.author} className="text-gray-900 bg-gray-300 focus:bg-gray-100 w-full py-2 px-1" />
+              <input onChange={this.handleAuthorChange} value={this.state.author} className="text-gray-900 bg-gray-300 focus:bg-gray-400 w-full py-2 px-1" />
             </div>
             <div className="sm:w-1/2 sm:ml-1">
               <label className="block text-xs uppercase font-bold">Subreddit</label>
-              <input onChange={this.handleSubredditChange} value={this.state.subreddit} className="text-gray-900 bg-gray-300 focus:bg-gray-100 w-full py-2 px-1" />
+              <input onChange={this.handleSubredditChange} value={this.state.subreddit} className="text-gray-900 bg-gray-300 focus:bg-gray-400 w-full py-2 px-1" />
             </div>
           </div>
           {/* Type, Count and Score Filter */}
@@ -335,7 +335,7 @@ export class App extends React.Component<{}, AppState> {
             <div className="sm:w-1/3">
               <label className="block text-xs uppercase font-bold">Search for</label>
               <div className="relative">
-                <select onChange={this.handleSearchTypeChange} value={this.state.searchFor === SearchType.Comments ? "Comments" : "Posts"} className="text-gray-900 bg-gray-300 focus:bg-gray-100 w-full py-2 px-1 appearance-none">
+                <select onChange={this.handleSearchTypeChange} value={this.state.searchFor === SearchType.Comments ? "Comments" : "Posts"} className="text-gray-900 bg-gray-300 focus:bg-gray-400 w-full py-2 px-1 appearance-none">
                   <option>Comments</option>
                   <option>Posts</option>
                 </select>
@@ -347,11 +347,11 @@ export class App extends React.Component<{}, AppState> {
             <div className="sm:w-1/3 sm:ml-1">
               <label className="block text-xs uppercase font-bold">Num. Returned</label>
               <input onInput={this.handleResultSizeChange}
-                className="text-gray-900 bg-gray-300 focus:bg-gray-100 w-full py-2 px-1" type="number" min="25" step="25" value={this.state.resultSize} onChange={e => { }} />
+                className="text-gray-900 bg-gray-300 focus:bg-gray-400 w-full py-2 px-1" type="number" min="25" step="25" value={this.state.resultSize} onChange={e => { }} />
             </div>
             <div className="sm:w-1/3 sm:ml-1">
               <label className="block text-xs uppercase font-bold">Score Filter</label>
-              <input onChange={this.handleFilterChange} value={this.state.filter} className="text-gray-900 bg-gray-300 focus:bg-gray-100 w-full py-2 px-1" placeholder="e.g. >10 <100 >100,<900" />
+              <input onChange={this.handleFilterChange} value={this.state.filter} className="text-gray-900 bg-gray-300 focus:bg-gray-400 w-full py-2 px-1" placeholder="e.g. >10 <100 >100,<900" />
             </div>
           </div>
           {/* Time Range */}
@@ -364,7 +364,7 @@ export class App extends React.Component<{}, AppState> {
                 timeIntervals={15}
                 timeCaption="time"
                 dateFormat="MMMM d, yyyy h:mm aa"
-                className="text-gray-900 bg-gray-300 focus:bg-gray-100 py-2 px-1"
+                className="text-gray-900 bg-gray-300 focus:bg-gray-400 py-2 px-1"
                 onChange={this.handleAfterDateChange}
                 selected={this.state.after}
               />
@@ -377,7 +377,7 @@ export class App extends React.Component<{}, AppState> {
                 timeIntervals={15}
                 timeCaption="time"
                 dateFormat="MMMM d, yyyy h:mm aa"
-                className="text-gray-900 bg-gray-300 focus:bg-gray-100 py-2 px-1"
+                className="text-gray-900 bg-gray-300 focus:bg-gray-400 py-2 px-1"
                 onChange={this.handleBeforeDateChange}
                 selected={this.state.before}
               />
@@ -386,7 +386,7 @@ export class App extends React.Component<{}, AppState> {
           {/* Search Term */}
           <div>
             <label className="block text-xs uppercase font-bold">Search Term</label>
-            <input onChange={this.handleQueryChange} value={this.state.query} className="text-gray-900 bg-gray-300 focus:bg-gray-100 w-full py-2 px-1" />
+            <input onChange={this.handleQueryChange} value={this.state.query} className="text-gray-900 bg-gray-300 focus:bg-gray-400 w-full py-2 px-1" />
           </div>
           {/* Submit Button and Error text */}
           <button type="submit" className="bg-red-900 hover:bg-red-800 font-bold mt-4 py-2">{this.state.searching ? "Searching..." : "Search"}</button>
